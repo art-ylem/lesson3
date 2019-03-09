@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lesson3</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="title_activity_third">ThirdActivity</string>
+    <string name="title_activity_fourth">FourthActivity</string>
+    <string name="title_activity_fivth">FivthActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>
