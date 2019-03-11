@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".javaExample.WhatsAppActivity">
+
+    <TextView
+        android:id="@+id/settings_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="40dp"
+        android:paddingTop="22dp"
+        android:text="Settings"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@id/back_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/back_arrow"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimary"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/settings_text"
+        app:layout_constraintEnd_toStartOf="@id/settings_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_avatar"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintEnd_toStartOf="@id/status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_arrow" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Sergey Balakin"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@id/status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/status"
+        app:layout_constraintTop_toTopOf="@id/avatar" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="Hey there!  I am using WhatsApp."
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/avatar"
+        app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@id/ic_key"
+        android:layout_marginBottom="15dp"
+        />
+
+    <ImageView
+        android:id="@+id/ic_key"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:rotation="90"
+        android:src="@drawable/ic_key"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar" />
+
+    <TextView
+        android:id="@+id/key_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_key"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ic_key"
+        app:layout_constraintTop_toTopOf="@+id/ic_key"
+        app:layout_constraintHorizontal_bias="0.15"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@id/ic_chat"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintStart_toStartOf="@id/chat_text"
+        />
+
+    <ImageView
+        android:id="@+id/ic_chat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_chat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_key" />
+
+    <TextView
+        android:id="@+id/chat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Chats"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/key_text"
+        app:layout_constraintTop_toTopOf="@+id/ic_chat"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@id/ic_notification"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintStart_toStartOf="@id/notification_text"
+        />
+
+    <ImageView
+        android:id="@+id/ic_notification"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_notification"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_chat" />
+
+    <TextView
+        android:id="@+id/notification_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notification"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_notification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/key_text"
+        app:layout_constraintTop_toTopOf="@+id/ic_notification"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@id/ic_data"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintStart_toStartOf="@id/data_text"
+        />
+
+    <ImageView
+        android:id="@+id/ic_data"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_notification" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@id/ic_friend"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintStart_toStartOf="@id/friend_text"
+        />
+
+    <TextView
+        android:id="@+id/data_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/key_text"
+        app:layout_constraintTop_toTopOf="@+id/ic_data"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <ImageView
+        android:id="@+id/ic_friend"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_group"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_data" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@id/ic_help"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintStart_toStartOf="@id/help_text"
+        />
+
+    <TextView
+        android:id="@+id/friend_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invite your friend"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_friend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/key_text"
+        app:layout_constraintTop_toTopOf="@+id/ic_friend"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <ImageView
+        android:id="@+id/ic_help"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_help"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_friend" />
+
+    <TextView
+        android:id="@+id/help_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/key_text"
+        app:layout_constraintTop_toTopOf="@+id/ic_help"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+
+</android.support.constraint.ConstraintLayout>
