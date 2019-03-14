@@ -17,7 +17,8 @@ public class MainActivity extends ParentActivity {
         setContentView(R.layout.activity_whats_app2);
 
         whatsAppConstraintLayout = findViewById(R.id.whatsApp2);
-        CustomRect();
+        customRect();
+        customText();
 
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -45,14 +46,20 @@ public class MainActivity extends ParentActivity {
 //        for(int i = 0; i < machines.length; i++ ){
 //            machines[i].startEngine();
 //        }
+    }
 
+    public void customText(){
+        CustomTextView cusText1 = new CustomTextView(this);
+        ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.WRAP_CONTENT,ConstraintLayout.LayoutParams.WRAP_CONTENT);
+        whatsAppConstraintLayout.addView(cusText1, params);
 
     }
 
-    public void CustomRect(){
-        ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.MATCH_PARENT, ConstraintLayout.LayoutParams.MATCH_PARENT);
+    public void customRect(){
         CustomView rect1 = new CustomView(this);
+        ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.WRAP_CONTENT,ConstraintLayout.LayoutParams.WRAP_CONTENT);
         whatsAppConstraintLayout.addView(rect1, params);
     }
+
 
 }

@@ -7,16 +7,17 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-public class CustomView extends View {
-    public CustomView(Context context) {
+public class CustomTextView extends View {
+
+    public CustomTextView(Context context) {
         super(context);
     }
 
-    public CustomView(Context context, AttributeSet attrs) {
+    public CustomTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public CustomView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CustomTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
@@ -24,7 +25,7 @@ public class CustomView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         Paint paint = new Paint();
-        paint.setColor(Color.LTGRAY);
-        canvas.drawRect(0,0,400,150, paint);
+        paint.setColor(Color.GREEN);
+        canvas.drawText("Custom Text View's TEXT",0,0, paint);
     }
 }
