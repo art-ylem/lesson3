@@ -37,9 +37,8 @@
         android:id="@+id/avatar"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/ic_avatar"
-        app:layout_constraintBottom_toTopOf="@+id/guideline1"
         app:layout_constraintEnd_toStartOf="@id/status"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/back_arrow" />
@@ -48,7 +47,7 @@
         android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:text="Sergey Balakin"
         android:textColor="@android:color/black"
         android:textSize="22sp"
@@ -67,17 +66,10 @@
         android:text="Hey there!  I am using WhatsApp."
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/avatar"
         app:layout_constraintTop_toBottomOf="@+id/user_name" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
 
     <View
         android:layout_width="match_parent"
@@ -85,6 +77,7 @@
         android:background="@android:color/darker_gray"
         app:layout_constraintBottom_toTopOf="@id/ic_key"
         android:layout_marginBottom="15dp"
+
         />
 
     <ImageView
@@ -117,6 +110,7 @@
         android:background="@android:color/darker_gray"
         app:layout_constraintBottom_toTopOf="@id/ic_chat"
         android:layout_marginBottom="15dp"
+        android:layout_marginStart="120dp"
         app:layout_constraintStart_toStartOf="@id/chat_text"
         />
 
@@ -151,6 +145,7 @@
         app:layout_constraintBottom_toTopOf="@id/ic_notification"
         android:layout_marginBottom="15dp"
         app:layout_constraintStart_toStartOf="@id/notification_text"
+        android:layout_marginStart="120dp"
         />
 
     <ImageView
@@ -183,6 +178,7 @@
         app:layout_constraintBottom_toTopOf="@id/ic_data"
         android:layout_marginBottom="15dp"
         app:layout_constraintStart_toStartOf="@id/data_text"
+        android:layout_marginStart="120dp"
         />
 
     <ImageView
@@ -202,6 +198,7 @@
         app:layout_constraintBottom_toTopOf="@id/ic_friend"
         android:layout_marginBottom="15dp"
         app:layout_constraintStart_toStartOf="@id/friend_text"
+        android:layout_marginStart="120dp"
         />
 
     <TextView
@@ -234,6 +231,7 @@
         app:layout_constraintBottom_toTopOf="@id/ic_help"
         android:layout_marginBottom="15dp"
         app:layout_constraintStart_toStartOf="@id/help_text"
+        android:layout_marginStart="120dp"
         />
 
     <TextView

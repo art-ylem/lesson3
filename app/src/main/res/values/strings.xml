@@ -6,4 +6,15 @@
     <string name="title_activity_fourth">FourthActivity</string>
     <string name="title_activity_fivth">FivthActivity</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="title1">Disk and network usage</string>
+    <string name="storage_usage">Storage Usage</string>
+    <string name="data_usage">Data Usage</string>
+    <string name="title2">Automatic media download</string>
+    <string name="mobile_data">When using mobile data</string>
+    <string name="wifi">When connected on Wi-Fi</string>
+    <string name="mobile_data_grey">Photos, Videos (10 MB), Files (1 MB)</string>
+    <string name="wifi_grey">Photos, Videos (15 MB), Files (3 MB)</string>
+    <string name="roaming">When roaming</string>
+    <string name="roaming_gray">Photos</string>
+    <string name="reset">Reset Auto-Download Settings</string>
 </resources>

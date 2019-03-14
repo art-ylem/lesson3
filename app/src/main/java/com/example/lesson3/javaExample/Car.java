@@ -1,9 +1,24 @@
 package com.example.lesson3.javaExample;
 
 
-public class Car extends Machine{
+import android.util.Log;
+
+public class Car extends Machine {
     int score = 0;
+
     String carName;
+
+
+    @Override
+    public void startEngine() {
+        super.startEngine();
+        Log.d("AAAAA", "startEngine: car");
+    }
+
+    @Override
+    void finishEngine() {
+        Log.d("AAAAA", "finishEngine: car");
+    }
 
     public Car() {
     }
@@ -22,14 +37,15 @@ public class Car extends Machine{
         this.carName = nam;
     }
 
-    public void driving(){
-        methodPublic();
-        methodDefault();
-        methodProtected();
-
+    public int getScore() {
+        return score;
     }
 
+    public void setScore(int score) {
 
+        this.score = score;
+    }
 
-
+    public void driving() {
+    }
 }

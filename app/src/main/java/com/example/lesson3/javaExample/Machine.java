@@ -1,30 +1,34 @@
 package com.example.lesson3.javaExample;
 
-public class Machine {
+import android.util.Log;
+
+public abstract class Machine {
+
+    int koleso = 0;
+    int score;
+
+    public static class Detail {
+        private String detailNum;
+
+        public Detail(String detailNum) {
+            this.detailNum = detailNum;
+        }
+
+        public String getDetailNum() {
+            return detailNum;
+        }
+
+        public void setDetailNum(String detailNum) {
+            this.detailNum = detailNum;
+        }
+    }
 
     public void startEngine(){
-
+        Log.d("AAAAA", "startEngine: machine");
     }
 
-    public void finishEngine(){
 
-    }
-
-    private void methodPrivate(){
-
-    }
-
-    protected void methodProtected(){
-
-    }
-
-    void methodDefault(){
-
-    }
-
-    public void methodPublic(){
-
-    }
+    abstract void finishEngine();
 
 }
 

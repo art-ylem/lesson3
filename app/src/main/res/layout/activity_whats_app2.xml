@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WhatsAppActivity2">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/title1"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/storageUsage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/storage_usage"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        android:textSize="24sp"
+        android:paddingTop="15dp"
+        android:paddingBottom="7dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/storageUsage"
+        android:layout_marginStart="35dp"
+        />
+
+    <TextView
+        android:id="@+id/dataUsage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/data_usage"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/storageUsage"
+        android:textSize="24sp"
+        android:paddingTop="7dp"
+        android:paddingBottom="10dp"/>
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/leftVerticalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="35dp" />
+
+    <View
+        android:id="@+id/greyLine2"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/dataUsage"
+        />
+
+    <TextView
+        android:id="@+id/titleText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/title2"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/greyLine2"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/mobileData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/mobile_data"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/titleText2"
+        android:textSize="24sp"
+        android:paddingTop="15dp"/>
+
+    <TextView
+        android:id="@+id/mobileDataGray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/mobile_data_grey"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/mobileData"
+        android:textSize="16sp"
+        android:paddingBottom="13dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/mobileDataGray"
+        android:layout_marginStart="35dp"
+        />
+
+    <TextView
+        android:id="@+id/wifi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/wifi"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/mobileDataGray"
+        android:textSize="24sp"
+        android:paddingTop="7dp"/>
+
+    <TextView
+        android:id="@+id/wifiGray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/wifi_grey"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/wifi"
+        android:textSize="16sp"
+        android:paddingBottom="13dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/wifiGray"
+        android:layout_marginStart="35dp"
+        />
+
+    <TextView
+        android:id="@+id/roaming"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/roaming"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/wifiGray"
+        android:textSize="24sp"
+        android:paddingTop="7dp"/>
+
+    <TextView
+        android:id="@+id/roamingGray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/roaming_gray"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/roaming"
+        android:textSize="16sp"
+        android:paddingBottom="13dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/roamingGray"
+        android:layout_marginStart="35dp"
+        />
+
+    <TextView
+        android:id="@+id/reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/roamingGray"
+        android:textSize="24sp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        />
+
+    <View
+        android:id="@+id/greyLine3"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/reset"
+        />
+
+    <Switch
+        android:id="@+id/switchMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/mobileDataGray"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="23dp"
+        />
+
+    <Switch
+        android:id="@+id/switchWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/wifiGray"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="23dp"
+        />
+
+    <Switch
+        android:id="@+id/switchRoaming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/roamingGray"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="23dp"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
