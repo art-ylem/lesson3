@@ -78,7 +78,14 @@ public class MainActivity extends ParentActivity {
         storageUsageText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                WhatsAppActivity.start
+                WhatsAppActivity.startActivity(MainActivity.this);
+            }
+        });
+
+        dataUsageText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                WhatsAppActivity.startActivity(MainActivity.this);
             }
         });
 
@@ -111,9 +118,10 @@ public class MainActivity extends ParentActivity {
     }
 
     public static void startActivity(Context context) {
-        Intent intent = new Intent(context, SecondActivity.class);
+        Intent intent = new Intent(context, WhatsAppActivity2.class);
         context.startActivity(intent);
     }
+
 
     public void customText(){
         CustomTextView cusText1 = new CustomTextView(this);
