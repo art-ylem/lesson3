@@ -1,11 +1,26 @@
 package com.example.lesson3;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
+import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends ParentActivity {
     private ConstraintLayout whatsAppConstraintLayout;
+    private Switch switchMobile;
+    private Switch switchWifi;
+    private Switch switchRoaming;
+    private TextView mobileDataGreyText;
+    private TextView wifiGreyText;
+    private TextView roamingGreyText;
+    private TextView storageUsageText;
+    private TextView dataUsageText;
+
     @Override
     public void showStartToast() {
         Toast.makeText(this, "MainToast", Toast.LENGTH_SHORT).show();
@@ -17,8 +32,55 @@ public class MainActivity extends ParentActivity {
         setContentView(R.layout.activity_whats_app2);
 
         whatsAppConstraintLayout = findViewById(R.id.whatsApp2);
-        customRect();
-        customText();
+        switchMobile = findViewById(R.id.switchMobile);
+        switchWifi = findViewById(R.id.switchWifi);
+        switchRoaming = findViewById(R.id.switchRoaming);
+        mobileDataGreyText = findViewById(R.id.mobileDataGray);
+        wifiGreyText = findViewById(R.id.wifiGray);
+        roamingGreyText = findViewById(R.id.roamingGray);
+        storageUsageText = findViewById(R.id.storageUsage);
+        dataUsageText = findViewById(R.id.dataUsage);
+
+
+        switchMobile.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    mobileDataGreyText.setText(R.string.chenged_text);
+                } else{
+                    mobileDataGreyText.setText(R.string.mobile_data_grey);
+                }
+            }
+        });
+
+        switchWifi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    wifiGreyText.setText(R.string.chenged_text);
+                } else{
+                    wifiGreyText.setText(R.string.wifi_grey);
+                }
+            }
+        });
+
+        switchRoaming.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    roamingGreyText.setText(R.string.chenged_text);
+                } else{
+                    roamingGreyText.setText(R.string.roaming_gray);
+                }
+            }
+        });
+
+        storageUsageText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                WhatsAppActivity.start
+            }
+        });
 
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +108,11 @@ public class MainActivity extends ParentActivity {
 //        for(int i = 0; i < machines.length; i++ ){
 //            machines[i].startEngine();
 //        }
+    }
+
+    public static void startActivity(Context context) {
+        Intent intent = new Intent(context, SecondActivity.class);
+        context.startActivity(intent);
     }
 
     public void customText(){

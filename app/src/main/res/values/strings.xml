@@ -17,4 +17,7 @@
     <string name="roaming">When roaming</string>
     <string name="roaming_gray">Photos</string>
     <string name="reset">Reset Auto-Download Settings</string>
+    <string name="customText">Custom Text View's TEXT</string>
+    <string name="chenged_text">switch id checked</string>
+
 </resources>

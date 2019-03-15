@@ -228,19 +228,50 @@
         android:layout_marginBottom="23dp"
         />
 
-    <com.example.lesson3.CustomView
-        android:id="@+id/customView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/greyLine3"
-        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+    <!--<com.example.lesson3.CustomView-->
+        <!--android:id="@+id/customView1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/greyLine3"-->
+        <!--app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"-->
+        <!---->
 
-        />
+        <!--/>-->
     <com.example.lesson3.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/customView1"
-        app:layout_constraintStart_toStartOf="@id/customView1"/>
+        app:layout_constraintTop_toBottomOf="@id/greyLine3"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/darkGrey"
+        app:layout_constraintBottom_toBottomOf="@id/switchMobile"
+        app:layout_constraintTop_toTopOf="@id/switchMobile"
+        app:layout_constraintEnd_toStartOf="@id/switchMobile"
+        android:layout_marginRight="15dp"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/darkGrey"
+        app:layout_constraintBottom_toBottomOf="@id/switchWifi"
+        app:layout_constraintTop_toTopOf="@id/switchWifi"
+        app:layout_constraintEnd_toStartOf="@id/switchWifi"
+        android:layout_marginRight="15dp"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/darkGrey"
+        app:layout_constraintBottom_toBottomOf="@id/switchRoaming"
+        app:layout_constraintTop_toTopOf="@id/switchRoaming"
+        app:layout_constraintEnd_toStartOf="@id/switchRoaming"
+        android:layout_marginRight="15dp"
+        />
 
 
 </android.support.constraint.ConstraintLayout>

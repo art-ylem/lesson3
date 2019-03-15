@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".WhatsAppActivity2"></activity>
-        <activity android:name=".javaExample.WhatsAppActivity" />
+        <activity android:name=".WhatsAppActivity" />
         <activity
             android:name=".FifthActivity"
             android:label="@string/title_activity_fivth"

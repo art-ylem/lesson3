@@ -26,6 +26,7 @@ public class CustomTextView extends View {
         super.onDraw(canvas);
         Paint paint = new Paint();
         paint.setColor(Color.GREEN);
+
         canvas.drawText("Custom Text View's TEXT",0,0, paint);
     }
 }

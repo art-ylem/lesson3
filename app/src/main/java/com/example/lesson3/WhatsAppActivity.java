@@ -1,9 +1,7 @@
-package com.example.lesson3.javaExample;
+package com.example.lesson3;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
-import com.example.lesson3.R;
 
 public class WhatsAppActivity extends AppCompatActivity {
 
