@@ -20,7 +20,7 @@ public class WhatsAppActivity extends AppCompatActivity {
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.startActivity(WhatsAppActivity.this);
+                WhatsAppActivity2.startActivity(WhatsAppActivity.this);
             }
         });
 
