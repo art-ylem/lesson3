@@ -47,18 +47,29 @@ public class WhatsAppActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                Хочу чтобы при нажатии на reset сбрасывались все свичи
-//                switchMobile.isChecked();
+                switchMobile.setChecked(false);
+                switchRoaming.setChecked(false);
+                switchWifi.setChecked(false);
 
             }
         });
+
+//        switchMobile.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//
+//            }
+//        });
 
         switchMobile.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     mobileDataGreyText.setText(R.string.chenged_text);
+                    reset.setTextColor(Color.RED);
                 } else{
                     mobileDataGreyText.setText(R.string.mobile_data_grey);
+                    reset.setTextColor(Color.BLACK);
                 }
             }
         });
@@ -68,8 +79,10 @@ public class WhatsAppActivity2 extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     wifiGreyText.setText(R.string.chenged_text);
+                    reset.setTextColor(Color.RED);
                 } else{
-                    wifiGreyText.setText(R.string.wifi_grey);
+                    wifiGreyText.setText(R.string.wifi_grey); 11
+                    reset.setTextColor(Color.BLACK);
                 }
             }
         });
@@ -79,8 +92,10 @@ public class WhatsAppActivity2 extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     roamingGreyText.setText(R.string.chenged_text);
+                    reset.setTextColor(Color.RED);
                 } else{
                     roamingGreyText.setText(R.string.roaming_gray);
+                    reset.setTextColor(Color.BLACK);
                 }
             }
         });
