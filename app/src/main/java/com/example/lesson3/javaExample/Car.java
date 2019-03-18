@@ -4,6 +4,7 @@ package com.example.lesson3.javaExample;
 import android.util.Log;
 
 public class Car extends Machine {
+    public static final int SCORE = 8;
     int score = 0;
 
     String carName;
@@ -16,7 +17,7 @@ public class Car extends Machine {
     }
 
     @Override
-    void finishEngine() {
+    public void finishEngine() {
         Log.d("AAAAA", "finishEngine: car");
     }
 
@@ -47,5 +48,6 @@ public class Car extends Machine {
     }
 
     public void driving() {
+
     }
 }

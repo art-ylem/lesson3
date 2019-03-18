@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -66,11 +67,10 @@ public class WhatsAppActivity2 extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     mobileDataGreyText.setText(R.string.chenged_text);
-                    reset.setTextColor(Color.RED);
                 } else{
                     mobileDataGreyText.setText(R.string.mobile_data_grey);
-                    reset.setTextColor(Color.BLACK);
                 }
+                checkReset();
             }
         });
 
@@ -79,11 +79,10 @@ public class WhatsAppActivity2 extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     wifiGreyText.setText(R.string.chenged_text);
-                    reset.setTextColor(Color.RED);
                 } else{
-                    wifiGreyText.setText(R.string.wifi_grey); 11
-                    reset.setTextColor(Color.BLACK);
+                    wifiGreyText.setText(R.string.wifi_grey);
                 }
+                checkReset();
             }
         });
 
@@ -92,11 +91,11 @@ public class WhatsAppActivity2 extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
                     roamingGreyText.setText(R.string.chenged_text);
-                    reset.setTextColor(Color.RED);
                 } else{
                     roamingGreyText.setText(R.string.roaming_gray);
-                    reset.setTextColor(Color.BLACK);
                 }
+                checkReset();
+
             }
         });
 
@@ -104,7 +103,6 @@ public class WhatsAppActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 WhatsAppActivity.startActivity(WhatsAppActivity2.this);
-                storageUsageText.setTextColor(Color.BLUE);
             }
         });
 
@@ -112,7 +110,6 @@ public class WhatsAppActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 WhatsAppActivity.startActivity(WhatsAppActivity2.this);
-                dataUsageText.setTextColor(Color.BLUE);
 
             }
         });
@@ -136,6 +133,14 @@ public class WhatsAppActivity2 extends AppCompatActivity {
         CustomView rect1 = new CustomView(this);
         ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.WRAP_CONTENT,ConstraintLayout.LayoutParams.WRAP_CONTENT);
         whatsAppConstraintLayout.addView(rect1, params);
+    }
+
+    public void checkReset(){
+        if(switchMobile.isChecked() || switchRoaming.isChecked() || switchWifi.isChecked()){
+            reset.setTextColor(Color.RED);
+        } else{
+            reset.setTextColor(ContextCompat.getColor(this, R.color.red));
+        }
     }
 
 }

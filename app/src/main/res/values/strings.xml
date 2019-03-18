@@ -19,5 +19,18 @@
     <string name="reset">Reset Auto-Download Settings</string>
     <string name="customText">Custom Text Views TEXT</string>
     <string name="chenged_text">switch id checked</string>
+    <string name="titleNotification1">Notifications for chats</string>
+    <string name="private_chats">Private Chats</string>
+    <string name="tap_to_change">Tap to change</string>
+    <string name="groups">Groups</string>
+    <string name="groups_gray">On, 9 exceptions</string>
+    <string name="groups_gray_off">Off, 9 exceptions</string>
+    <string name="channels">Channels</string>
+    <string name="channels_gray">On, 1 exception</string>
+    <string name="channels_gray_off">Off, 1 exception</string>
+    <string name="title_voice">Voice calls</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="ringtone">Ringtone</string>
+    <string name="defaultt">Default</string>
 
 </resources>

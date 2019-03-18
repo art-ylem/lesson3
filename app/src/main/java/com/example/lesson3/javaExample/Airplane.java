@@ -6,7 +6,7 @@ public class Airplane extends Machine{
 
 
     @Override
-    void finishEngine() {
+    public void finishEngine() {
 
         Log.d("AAAAA", "finishEngine: Airplane");
     }

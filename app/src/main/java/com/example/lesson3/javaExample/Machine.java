@@ -2,12 +2,15 @@ package com.example.lesson3.javaExample;
 
 import android.util.Log;
 
-public abstract class Machine {
+public class Machine {
 
     int koleso = 0;
     int score;
 
     public static class Detail {
+        public Detail() {
+        }
+
         private String detailNum;
 
         public Detail(String detailNum) {
@@ -28,7 +31,9 @@ public abstract class Machine {
     }
 
 
-    abstract void finishEngine();
+    public void finishEngine(){
+
+    };
 
 }
 

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotificationsAndSounds">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/leftVerticalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="35dp" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/titleNotification1"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/private_chats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/private_chats"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        android:textSize="24sp"
+        android:paddingTop="15dp"/>
+
+    <TextView
+        android:id="@+id/private_chats_gray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tap_to_change"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/private_chats"
+        android:textSize="16sp"
+        android:paddingBottom="15dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/private_chats_gray"
+        android:layout_marginStart="35dp"
+        />
+
+    <Switch
+        android:id="@+id/switch_private"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/private_chats_gray"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="23dp"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/darkGrey"
+        app:layout_constraintBottom_toBottomOf="@id/switch_private"
+        app:layout_constraintTop_toTopOf="@id/switch_private"
+        app:layout_constraintEnd_toStartOf="@id/switch_private"
+        android:layout_marginEnd="15dp"
+        />
+
+    <TextView
+    android:id="@+id/groups"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="@string/groups"
+    android:textColor="@color/black"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+    app:layout_constraintTop_toBottomOf="@id/private_chats_gray"
+    android:textSize="24sp"
+    android:paddingTop="15dp"/>
+
+    <TextView
+        android:id="@+id/groups_gray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/groups_gray"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/groups"
+        android:textSize="16sp"
+        android:paddingBottom="15dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/groups_gray"
+        android:layout_marginStart="35dp"
+        />
+
+    <Switch
+        android:id="@+id/switch_groups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/groups_gray"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="23dp"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/darkGrey"
+        app:layout_constraintBottom_toBottomOf="@id/switch_groups"
+        app:layout_constraintTop_toTopOf="@id/switch_groups"
+        app:layout_constraintEnd_toStartOf="@id/switch_groups"
+        android:layout_marginEnd="15dp"
+        />
+
+
+    <TextView
+        android:id="@+id/channels"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/channels"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/groups_gray"
+        android:textSize="24sp"
+        android:paddingTop="15dp"/>
+
+    <TextView
+        android:id="@+id/channels_gray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/channels_gray"
+        android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/channels"
+        android:textSize="16sp"
+        android:paddingBottom="15dp"/>
+
+
+    <Switch
+        android:id="@+id/switch_channels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/channels_gray"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="23dp"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/darkGrey"
+        app:layout_constraintBottom_toBottomOf="@id/switch_channels"
+        app:layout_constraintTop_toTopOf="@id/switch_channels"
+        app:layout_constraintEnd_toStartOf="@id/switch_channels"
+        android:layout_marginEnd="15dp"
+        />
+
+    <View
+        android:id="@+id/greyLine"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/channels_gray"
+        />
+
+
+    <TextView
+        android:id="@+id/titleVoice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/title_voice"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/greyLine"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/vibrate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/vibrate"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/titleVoice"
+        android:textSize="24sp"
+        android:paddingTop="15dp"
+        android:paddingBottom="7dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/vibrate"
+        android:layout_marginStart="35dp"
+        />
+
+    <TextView
+        android:id="@+id/ringtone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/ringtone"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftVerticalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/vibrate"
+        android:textSize="24sp"
+        android:paddingTop="7dp"
+        android:paddingBottom="10dp"/>
+    <TextView
+        android:id="@+id/vibrate_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="@string/defaultt"
+        app:layout_constraintTop_toTopOf="@id/vibrate"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="25dp"
+        android:textColor="@color/blue"
+        android:paddingTop="15dp"
+        />
+    <TextView
+        android:id="@+id/ringtone_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="@string/defaultt"
+        app:layout_constraintTop_toTopOf="@id/ringtone"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="25dp"
+        android:textColor="@color/blue"
+        android:paddingTop="7dp"
+        />
+
+
+
+    <View
+        android:id="@+id/greyLine2"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/ringtone"
+        />
+
+</android.support.constraint.ConstraintLayout>

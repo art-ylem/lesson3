@@ -5,24 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        WhatsAppActivity2.startActivity(MainActivity.this);
 
 
-        //        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                SecondActivity.startActivity(MainActivity.this);
-//            }
-//        });
-//
+//        int s = Car.SCORE;
 //        Car sportCar = new Car(){
 //            @Override
 //            public void startEngine() {
-//                Log.d(TAG, "startEngine: OOOOOOOOOOOOOOOOOOO");
+//                Log.d("TAG", "startEngine: OOOOOOOOOOOOOOOOOOO");
 //            }
 //        };
 //
@@ -33,10 +26,34 @@ public class MainActivity extends AppCompatActivity {
 //        Machine.Detail mach3 = new Machine.Detail("name");
 //
 //        Machine[] machines = {new Car(), new Car(), new Airplane(), sportCar};
+//        Machine m = mach2;
 //
 //        for(int i = 0; i < machines.length; i++ ){
-//            machines[i].startEngine();
+//            if(machines[i] instanceof Car){
+//                Car c = (Car) machines[i];
+//                c.driving();
+//            }
 //        }
+//
+//        int f = 1;
+//        try {
+//            int u =5/f;
+//            int[] intArr = {};
+//            int b = intArr[1];
+//        } catch (ArithmeticException e){
+//            Log.e("tag", "Arithmetic:  divide by ZERO");
+//        } catch (ArrayIndexOutOfBoundsException e){
+//            Log.e("tag", "RT:  divide by ZERO");
+//        }
+//
+
+    }
+
+    public void err(){
+        int i = 2;
+        if(i == 2){
+            throw new ArithmeticException("arithmeticEx 2!");
+        }
     }
 
 
