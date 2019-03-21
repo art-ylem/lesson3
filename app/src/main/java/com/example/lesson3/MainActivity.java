@@ -1,60 +1,41 @@
 package com.example.lesson3;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        fab =findViewById(R.id.fab);
 
-
-//        int s = Car.SCORE;
-//        Car sportCar = new Car(){
-//            @Override
-//            public void startEngine() {
-//                Log.d("TAG", "startEngine: OOOOOOOOOOOOOOOOOOO");
-//            }
-//        };
-//
-//        Machine mach1 = new Car();
-//        Car mach2 = new Car();
-//        int y = 0;
-//        y++;
-//        Machine.Detail mach3 = new Machine.Detail("name");
-//
-//        Machine[] machines = {new Car(), new Car(), new Airplane(), sportCar};
-//        Machine m = mach2;
-//
-//        for(int i = 0; i < machines.length; i++ ){
-//            if(machines[i] instanceof Car){
-//                Car c = (Car) machines[i];
-//                c.driving();
-//            }
-//        }
-//
-//        int f = 1;
-//        try {
-//            int u =5/f;
-//            int[] intArr = {};
-//            int b = intArr[1];
-//        } catch (ArithmeticException e){
-//            Log.e("tag", "Arithmetic:  divide by ZERO");
-//        } catch (ArrayIndexOutOfBoundsException e){
-//            Log.e("tag", "RT:  divide by ZERO");
-//        }
-//
-
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SecondActivity.launchActivity(MainActivity.this, "Hello0000000000");
+            }
+        });
     }
 
-    public void err(){
-        int i = 2;
-        if(i == 2){
-            throw new ArithmeticException("arithmeticEx 2!");
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+                String result = data.getStringExtra("result");
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+            }
         }
-    }
+    }//onActivityResult
 
 
 }

@@ -16,6 +16,9 @@ public class NotificationsAndSounds extends AppCompatActivity {
     private Switch switchChannels;
     private TextView vibrate;
     private TextView ringtone;
+    private TextView channelsGray;
+    private TextView groupsGray;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,8 @@ public class NotificationsAndSounds extends AppCompatActivity {
         switchChannels = findViewById(R.id.switch_channels);
         vibrate = findViewById(R.id.vibrate);
         ringtone = findViewById(R.id.ringtone);
+        channelsGray = findViewById(R.id.channels_gray);
+        groupsGray = findViewById(R.id.groups_gray);
 
         vibrate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,9 +57,9 @@ public class NotificationsAndSounds extends AppCompatActivity {
                 if(isChecked){
                     switchGroups.setChecked(false);
                     switchPrivate.setChecked(false);
-                    switchChannels.setText(R.string.channels_gray);
+                    channelsGray.setText(R.string.channels_gray);
                 } else {
-                    switchChannels.setText(R.string.channels_gray_off);
+                    channelsGray.setText(R.string.channels_gray_off);
                 }
             }
         });
@@ -63,11 +68,11 @@ public class NotificationsAndSounds extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    switchGroups.setChecked(false);
+                    switchPrivate.setChecked(false);
                     switchChannels.setChecked(false);
-                    switchGroups.setText(R.string.groups_gray);
+                    groupsGray.setText(R.string.groups_gray);
                 } else {
-                    switchGroups.setText(R.string.groups_gray_off);
+                    groupsGray.setText(R.string.groups_gray_off);
                 }
             }
         });
@@ -86,7 +91,7 @@ public class NotificationsAndSounds extends AppCompatActivity {
     }
 
     public static void startActivity(Context context) {
-        Intent intent = new Intent(context, WhatsAppActivity2.class);
+        Intent intent = new Intent(context, NotificationsAndSounds.class);
         context.startActivity(intent);
     }
 }
