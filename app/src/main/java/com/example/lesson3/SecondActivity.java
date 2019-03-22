@@ -23,7 +23,6 @@ public class SecondActivity extends ParentActivity {
         Intent intent = new Intent(context, SecondActivity.class);
         intent.putExtra("EXTRA_SESSION_ID", value);
         context.startActivity(intent);
-
     }
 
     public void finishActivityWithResult(String result){
